@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>S-Computer | Courses</title>
+  <style>
+    :root{--accent:#0f6;--bg:#f7fafc;--card:#ffffff;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:var(--bg);color:#111}
+    header{background:linear-gradient(90deg, #0ea5a4, #0369a1);color:white;padding:28px 18px}
+    .container{max-width:1000px;margin:0 auto;padding:24px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:10px;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0 0;color:rgba(255,255,255,0.9)}
+
+    .hero{margin:20px 0;padding:20px;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));border-radius:10px;color:white}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(8,15,30,0.06)}
+    .course-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .price{background:#eefbf7;padding:6px 10px;border-radius:8px;font-weight:700;color:#065f46}
+    ul{margin:8px 0 0;padding-left:18px;color:var(--muted)}
+    .muted{color:var(--muted);font-size:14px}
+    .cta{display:flex;gap:12px;margin-top:12px}
+    .btn{padding:10px 14px;border-radius:8px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:#0b7285;color:white}
+    .btn-outline{background:transparent;border:1px solid #e6eef0}
+
+    footer{margin-top:28px;padding:20px 0;color:var(--muted)}
+    .contact{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+    /* responsive */
+    @media (max-width:800px){
+      .grid{grid-template-columns:1fr}
+      header{padding:20px 12px}
+      .container{padding:12px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div class="logo">SC</div>
+        <div>
+          <h1>S-Computer</h1>
+          <p class="lead">Practical computer courses — small batches, friendly teachers.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2 style="margin:0 0 8px">Our Popular Courses</h2>
+      <p class="muted" style="margin:0">Choose a course below and click Enroll to contact us. Update contact details in the HTML before publishing.</p>
+    </section>
+
+    <section class="grid">
+      <!-- Basic Computer Course -->
+      <article class="card">
+        <div class="course-title">
+          <div>
+            <strong>Basic Computer Course</strong>
+            <div class="muted">Duration: 45 Days</div>
+          </div>
+          <div class="price">₹1,200</div>
+        </div>
+        <ul>
+          <li>English Typing</li>
+          <li>Basic Knowledge of Microsoft Word</li>
+          <li>Basic Knowledge of Microsoft PowerPoint</li>
+          <li>Basic Knowledge of Microsoft Excel</li>
+        </ul>
+        <div class="cta">
+          <button class="btn btn-primary" onclick="enroll('Basic Computer Course')">Enroll</button>
+          <button class="btn btn-outline" onclick="details('Basic Computer Course')">More details</button>
+        </div>
+      </article>
+
+      <!-- Basic Computer Course with Hindi Typing -->
+      <article class="card">
+        <div class="course-title">
+          <div>
+            <strong>Basic Computer Course with Hindi Typing</strong>
+            <div class="muted">Duration: 60 Days</div>
+          </div>
+          <div class="price">₹1,600</div>
+        </div>
+        <ul>
+          <li>English Typing &amp; Hindi Typing</li>
+          <li>Basic Knowledge of Microsoft Word</li>
+          <li>Basic Knowledge of Microsoft PowerPoint</li>
+          <li>Basic Knowledge of Microsoft Excel</li>
+        </ul>
+        <div class="cta">
+          <button class="btn btn-primary" onclick="enroll('Basic Computer Course with Hindi Typing')">Enroll</button>
+          <button class="btn btn-outline" onclick="details('Basic Computer Course with Hindi Typing')">More details</button>
+        </div>
+      </article>
+
+      <!-- Accounting Course -->
+      <article class="card">
+        <div class="course-title">
+          <div>
+            <strong>Accounting Course</strong>
+            <div class="muted">Duration: 45 Days</div>
+          </div>
+          <div class="price">₹1,800</div>
+        </div>
+        <ul>
+          <li>Practical accounting fundamentals</li>
+          <li>Introduction to bookkeeping</li>
+          <li>Practice with example vouchers and ledgers</li>
+        </ul>
+        <div class="cta">
+          <button class="btn btn-primary" onclick="enroll('Accounting Course')">Enroll</button>
+          <button class="btn btn-outline" onclick="details('Accounting Course')">More details</button>
+        </div>
+      </article>
+
+      <!-- Advance Excel -->
+      <article class="card">
+        <div class="course-title">
+          <div>
+            <strong>Advance Excel</strong>
+            <div class="muted">Duration: 1 Month</div>
+          </div>
+          <div class="price">₹1,200</div>
+        </div>
+        <ul>
+          <li>Advanced formulas and functions</li>
+          <li>PivotTables and data analysis</li>
+          <li>Charts, automation and basic macros</li>
+        </ul>
+        <div class="cta">
+          <button class="btn btn-primary" onclick="enroll('Advance Excel')">Enroll</button>
+          <button class="btn btn-outline" onclick="details('Advance Excel')">More details</button>
+        </div>
+      </article>
+    </section>
+
+    <section style="margin-top:20px">
+      <div class="card">
+        <h3 style="margin-top:0">Contact & Location</h3>
+        <p class="muted">Reach us at our center for inquiries or enrollment.</p>
+        <div class="contact" style="margin-top:8px">
+          <div class="muted">Phone: <strong>+91 9893692030</strong></div>
+          <div class="muted">WhatsApp: <strong>+91 9893692030</strong></div>
+          <div class="muted">Email: <strong>mrsaksham532@gmail.com</strong></div>
+          <div class="muted">Address: <strong>Bada Bazar, Sehore (M.P.)</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="muted">
+      <div>© S-Computer — Bada Bazar, Sehore. Built with ❤️</div>
+    </footer>
+  </main>
+
+  <script>
+    function enroll(course){
+      const email = 'mrsaksham532@gmail.com';
+      const subject = encodeURIComponent('Enrollment: ' + course);
+      const body = encodeURIComponent('Hi,\n\nI would like to enroll in "' + course + '". Please send details about batch timings and payment.\n\nThanks.');
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    }
+    function details(course){
+      alert(course + " — For more info call +91 9893692030 or visit S-Computer, Bada Bazar, Sehore.");
+    }
+  </script>
+</body>
+</html>
